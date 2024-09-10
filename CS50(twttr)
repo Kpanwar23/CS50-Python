@@ -1,0 +1,7 @@
+inp = input("Enter your username:")
+for letter in inp:
+    if letter in ["a","e","i","o","u","A","E","O","U","I"]:#make a list for all that we need to remove
+        print("", end="")#print nothing if found
+    else:
+        print(letter,end="")#print letter if found 
+print()
