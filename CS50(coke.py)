@@ -1,0 +1,8 @@
+due = 50
+while due >0:
+    print("Amount Due:",due)
+    coin=int(input("Enter coin value: "))
+    if coin in [5,10,25]:#checks if the entered value is correct and in the list
+        due = due - coin#subtracts the value from 50
+change = abs(due)#makes sure that the amount displayed is a positive value
+print("Change Owed:", change)
