@@ -1,0 +1,22 @@
+def main():
+    plate = input("Plate: ")
+    if is_valid(plate):
+        print("Valid")
+    else:
+        print("Invalid")
+
+
+def is_valid(s):
+    if s.isalnum() and s[0:2].isalpha() and 6>= len(s)>=2:#checking conditions of alphanumeric digits only, lenght of 2 to 6 and the first two chars not being a numerical value
+        for num in s:
+            if num.isdigit():
+                index = s.index(num)
+                if s[index:].isdigit() and int(num) !=0:#this if statement checks to make sure that the first numerical value that we encounter in not a '0'
+                    return True
+                else:
+                    return False
+        return True
+
+
+
+main()
