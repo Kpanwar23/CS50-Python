@@ -1,0 +1,12 @@
+grocery = {}# creating an empty dictionary
+while True:
+    try:
+        item= input("").upper()#getting input from user
+        if item in grocery:#if item already exists
+            grocery[item] = grocery[item]+1#adding to the number of item
+        else:
+            grocery[item] =1#if new item create new
+    except EOFError:#for when user pressed ctrl d
+        for i in sorted(grocery):
+            print(grocery[i],i)#printing out the full list 
+        break
