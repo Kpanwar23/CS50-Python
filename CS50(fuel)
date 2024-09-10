@@ -1,0 +1,28 @@
+def main():
+    x = fractionconvert("Enter the Fraction: ")
+    print(x)
+
+def fractionconvert(prompt):
+    while True:
+        try:
+            y, z = input(prompt).split("/")
+            y = int(y)
+            z = int(z)
+            if y <= z:
+                x = y/z
+            else:
+                continue
+        except (ValueError, ZeroDivisionError):
+            pass
+        else:
+            x *= 100
+            if x >= 99:
+                x = "F"
+            elif x <= 1:
+                x = "E"
+            else:
+                x = f"{x:.0f}%"
+            return x
+
+
+main()
